@@ -1,0 +1,17 @@
+[
+ {"q": "How much is the Starter plan?", "route": "answer", "chunk": "billing#1"},
+ {"q": "When are invoices issued?", "route": "answer", "chunk": "billing#3"},
+ {"q": "Can annual plans be refunded?", "route": "answer", "chunk": "refunds#2"},
+ {"q": "Who approves large refunds?", "route": "answer", "chunk": "refunds#4"},
+ {"q": "When do sessions expire?", "route": "answer", "chunk": "security#4"},
+ {"q": "How do I create an API key?", "route": "answer", "chunk": "api#1"},
+ {"q": "What is the API base URL?", "route": "answer", "chunk": "api#5"},
+ {"q": "Is support available 24/7?", "route": "answer", "chunk": "sla#4"},
+ {"q": "Can I get a DPA?", "route": "answer", "chunk": "data#5"},
+ {"q": "How fast do sensor kits ship?", "route": "answer", "chunk": "orders#1"},
+ {"q": "Is there a Slack integration?", "route": "answer", "chunk": "onboarding#3"},
+ {"q": "Do you offer phone support in Spanish?", "route": "handoff"},
+ {"q": "I want to speak to a manager", "route": "handoff"},
+ {"q": "Where's NW-10577?", "route": "tool"},
+ {"q": "Can you integrate with Salesforce?", "route": "handoff"}
+]

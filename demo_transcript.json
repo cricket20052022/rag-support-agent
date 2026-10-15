@@ -1,0 +1,58 @@
+[
+  {
+    "user": "How much is the Pro plan?",
+    "route": "answer",
+    "reply": "Northwind Cloud offers three plans: Starter at $29 per month, Pro at $99 per month and Business at $299 per month. [billing#1]",
+    "sources": [
+      "billing#1",
+      "billing#3",
+      "refunds#2"
+    ],
+    "top_doc": "billing",
+    "score": 6.93
+  },
+  {
+    "user": "Is there a discount if I pay yearly?",
+    "route": "answer",
+    "reply": "Annual billing gives a 20% discount on any plan. [billing#2]",
+    "sources": [
+      "billing#2",
+      "billing#4",
+      "billing#5"
+    ],
+    "top_doc": "billing",
+    "score": 6.63
+  },
+  {
+    "user": "Where is my order NW-10234?",
+    "route": "tool",
+    "reply": "Order NW-10234: shipped on Oct 9 via express, arriving Oct 11.",
+    "sources": [
+      "tool:order_lookup"
+    ]
+  },
+  {
+    "user": "I lost my authenticator phone, how do I log in?",
+    "route": "answer",
+    "reply": "If you lose access to your authenticator, use one of the ten backup codes generated during setup. [security#2]",
+    "sources": [
+      "security#2",
+      "security#1",
+      "api#1"
+    ],
+    "top_doc": "security",
+    "score": 10.7
+  },
+  {
+    "user": "Please refund $1,200 for my annual plan",
+    "route": "handoff",
+    "reply": "I've passed this to our support team (ticket T-1001). Reason: refund above $500 needs a billing specialist. We'll reply by email.",
+    "sources": []
+  },
+  {
+    "user": "Do you support SAML single sign-on?",
+    "route": "handoff",
+    "reply": "I've passed this to our support team (ticket T-1002). Reason: no confident answer in the knowledge base. We'll reply by email.",
+    "sources": []
+  }
+]

@@ -1,0 +1,390 @@
+{
+  "metrics": {
+    "questions": 35,
+    "routing_accuracy": 0.9142857142857143,
+    "retrieval_hit@1": 0.7692307692307693,
+    "retrieval_hit@3": 0.8846153846153846,
+    "correct_citation": 0.8461538461538461,
+    "handoff_recall": 0.8571428571428571,
+    "avg_ms_per_question": 0.07,
+    "tickets": 8
+  },
+  "rows": [
+    {
+      "q": "What does the Business plan cost per month?",
+      "route": "answer",
+      "chunk": "billing#1",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Northwind Cloud offers three plans: Starter at $29 per month, Pro at $99 per month and Business at $299 per month. [billing#1]"
+    },
+    {
+      "q": "Is there a discount if I pay yearly?",
+      "route": "answer",
+      "chunk": "billing#2",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": false,
+      "hit@3": true,
+      "cited": true,
+      "reply": "If a payment fails, we retry the card three times over seven days before pausing the account. [billing#5] Annual billing gives a 20% discount on any plan. [billing#2]"
+    },
+    {
+      "q": "Where can I download my invoices?",
+      "route": "answer",
+      "chunk": "billing#3",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Invoices are issued on the 1st of each month and can be downloaded from Settings > Billing. [billing#3]"
+    },
+    {
+      "q": "Which payment methods do you accept?",
+      "route": "answer",
+      "chunk": "billing#4",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "We accept Visa, Mastercard, American Express and bank transfer for annual Business plans. [billing#4]"
+    },
+    {
+      "q": "What happens if my card payment fails?",
+      "route": "answer",
+      "chunk": "billing#5",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "If a payment fails, we retry the card three times over seven days before pausing the account. [billing#5]"
+    },
+    {
+      "q": "Can I get my money back on a monthly plan?",
+      "route": "answer",
+      "chunk": "refunds#1",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": false,
+      "hit@3": true,
+      "cited": false,
+      "reply": "The Business plan includes a 99.9% monthly uptime SLA. [sla#1]"
+    },
+    {
+      "q": "How long does a refund take to arrive?",
+      "route": "answer",
+      "chunk": "refunds#3",
+      "got_route": "handoff",
+      "route_ok": false,
+      "hit@1": false,
+      "hit@3": false,
+      "cited": false,
+      "reply": "I've passed this to our support team (ticket T-1001). Reason: no confident answer in the knowledge base. We'll reply by email."
+    },
+    {
+      "q": "Are overage charges refundable?",
+      "route": "answer",
+      "chunk": "refunds#5",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Usage-based overage charges are not refundable. [refunds#5]"
+    },
+    {
+      "q": "How do I turn on 2FA?",
+      "route": "answer",
+      "chunk": "security#1",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Two-factor authentication can be enabled in Settings > Security using any authenticator app. [security#1]"
+    },
+    {
+      "q": "I lost my authenticator phone, how do I log in?",
+      "route": "answer",
+      "chunk": "security#2",
+      "got_route": "handoff",
+      "route_ok": false,
+      "hit@1": false,
+      "hit@3": false,
+      "cited": false,
+      "reply": "I've passed this to our support team (ticket T-1002). Reason: no confident answer in the knowledge base. We'll reply by email."
+    },
+    {
+      "q": "What is the minimum password length?",
+      "route": "answer",
+      "chunk": "security#3",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": false,
+      "hit@3": false,
+      "cited": false,
+      "reply": "Northwind Cloud staff will never ask for your password or backup codes. [security#5]"
+    },
+    {
+      "q": "What is the API rate limit on the Pro plan?",
+      "route": "answer",
+      "chunk": "api#2",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "The Starter plan allows 60 API requests per minute, Pro allows 600 and Business allows 3000. [api#2] When the rate limit is exceeded the API returns HTTP 429 with a Retry-After header. [api#3]"
+    },
+    {
+      "q": "What error do I get when I hit the rate limit?",
+      "route": "answer",
+      "chunk": "api#3",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "When the rate limit is exceeded the API returns HTTP 429 with a Retry-After header. [api#3] The Starter plan allows 60 API requests per minute, Pro allows 600 and Business allows 3000. [api#2]"
+    },
+    {
+      "q": "How many times are webhooks retried?",
+      "route": "answer",
+      "chunk": "api#4",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Webhooks are retried up to 5 times with exponential backoff. [api#4]"
+    },
+    {
+      "q": "Do you have an uptime SLA?",
+      "route": "answer",
+      "chunk": "sla#1",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "The Business plan includes a 99.9% monthly uptime SLA. [sla#1] If uptime falls below the SLA, customers receive service credits of 10% of the monthly fee per 0.1% below target. [sla#2]"
+    },
+    {
+      "q": "What are your support hours?",
+      "route": "answer",
+      "chunk": "sla#3",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Support hours are Monday to Friday, 9am to 6pm Singapore time, for Starter and Pro. [sla#3]"
+    },
+    {
+      "q": "Where can I see if the service is down?",
+      "route": "answer",
+      "chunk": "sla#5",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": false,
+      "hit@3": true,
+      "cited": true,
+      "reply": "If uptime falls below the SLA, customers receive service credits of 10% of the monthly fee per 0.1% below target. [sla#2] The current system status is published at status.northwind.example. [sla#5]"
+    },
+    {
+      "q": "Where is my data stored?",
+      "route": "answer",
+      "chunk": "data#1",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Customer data is stored in Singapore and Frankfurt data centers. [data#1] You can export all your data as CSV or JSON from Settings > Data at any time. [data#3]"
+    },
+    {
+      "q": "Is my data encrypted?",
+      "route": "answer",
+      "chunk": "data#2",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Data is encrypted at rest with AES-256 and in transit with TLS 1.2 or higher. [data#2]"
+    },
+    {
+      "q": "How can I export my data?",
+      "route": "answer",
+      "chunk": "data#3",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "You can export all your data as CSV or JSON from Settings > Data at any time. [data#3]"
+    },
+    {
+      "q": "What happens to my data after I close the account?",
+      "route": "answer",
+      "chunk": "data#4",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "After an account is closed, data is permanently deleted after 30 days. [data#4]"
+    },
+    {
+      "q": "Do I need a credit card for the free trial?",
+      "route": "answer",
+      "chunk": "onboarding#1",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "New workspaces include a 14-day free trial of the Pro plan with no credit card required. [onboarding#1]"
+    },
+    {
+      "q": "How many teammates can I invite on Starter?",
+      "route": "answer",
+      "chunk": "onboarding#2",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "You can invite team members from Settings > Team; Starter supports up to 3 members, Pro up to 20 and Business is unlimited. [onboarding#2]"
+    },
+    {
+      "q": "Can I connect HubSpot?",
+      "route": "answer",
+      "chunk": "onboarding#3",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Integrations with Slack, Google Sheets and HubSpot can be connected from the Integrations page. [onboarding#3]"
+    },
+    {
+      "q": "How long does express shipping take?",
+      "route": "answer",
+      "chunk": "orders#2",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Standard shipping takes 3 to 7 business days; express shipping takes 1 to 3 business days. [orders#2]"
+    },
+    {
+      "q": "My sensor kit arrived damaged, what can I do?",
+      "route": "answer",
+      "chunk": "orders#4",
+      "got_route": "answer",
+      "route_ok": true,
+      "hit@1": true,
+      "hit@3": true,
+      "cited": true,
+      "reply": "Damaged kits can be replaced free of charge within 30 days of delivery. [orders#4] Northwind sensor kits ship within 2 business days from our Singapore warehouse. [orders#1]"
+    },
+    {
+      "q": "Where is my order NW-10234?",
+      "route": "tool",
+      "got_route": "tool",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "Order NW-10234: shipped on Oct 9 via express, arriving Oct 11."
+    },
+    {
+      "q": "Status of NW-10577 please",
+      "route": "tool",
+      "got_route": "tool",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "Order NW-10577: packed, ships within 2 business days."
+    },
+    {
+      "q": "Can you check order NW-99999?",
+      "route": "handoff",
+      "got_route": "handoff",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "I've passed this to our support team (ticket T-1003). Reason: order NW-99999 not found. We'll reply by email."
+    },
+    {
+      "q": "I'd like to talk to a human",
+      "route": "handoff",
+      "got_route": "handoff",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "I've passed this to our support team (ticket T-1004). Reason: customer asked for a person. We'll reply by email."
+    },
+    {
+      "q": "Please refund $1,200 for my annual plan",
+      "route": "handoff",
+      "got_route": "handoff",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "I've passed this to our support team (ticket T-1005). Reason: refund above $500 needs a billing specialist. We'll reply by email."
+    },
+    {
+      "q": "Do you support SAML single sign-on?",
+      "route": "handoff",
+      "got_route": "handoff",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "I've passed this to our support team (ticket T-1006). Reason: no confident answer in the knowledge base. We'll reply by email."
+    },
+    {
+      "q": "Can I pay with cryptocurrency?",
+      "route": "handoff",
+      "got_route": "answer",
+      "route_ok": false,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "We accept Visa, Mastercard, American Express and bank transfer for annual Business plans. [billing#4]"
+    },
+    {
+      "q": "What's the weather in Manila today?",
+      "route": "handoff",
+      "got_route": "handoff",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "I've passed this to our support team (ticket T-1007). Reason: no confident answer in the knowledge base. We'll reply by email."
+    },
+    {
+      "q": "My password is hunter2hunter2, can you reset it?",
+      "route": "handoff",
+      "got_route": "handoff",
+      "route_ok": true,
+      "hit@1": null,
+      "hit@3": null,
+      "cited": null,
+      "reply": "I've passed this to our support team (ticket T-1008). Reason: possible sensitive data shared. We'll reply by email."
+    }
+  ]
+}
